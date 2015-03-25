@@ -1,0 +1,38 @@
+
+<!-- Labels
+================================================== -->
+
+  <div class="row">
+    <div class="col-lg-4">
+      <h3 id="labels">Labels</h3>
+      <span class="label label-default">Default</span>
+      <span class="label label-success">Success</span>
+      <span class="label label-warning">Warning</span>
+      <span class="label label-danger">Danger</span>
+      <span class="label label-info">Info</span>
+    </div>
+    <div class="col-lg-4">
+      <h3 id="badges">Badges</h3>
+      <span class="badge">Default</span>
+    </div>
+    <div class="col-lg-4">
+      <h3 id="badges">Progress bars</h3>
+      <div class="progress">
+        <div class="progress-bar progress-bar-info" style="width: 20%"></div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+      </div>
+      
+    </div>
+    
+    
+  	</div>
+  <br>
+  

@@ -1,0 +1,79 @@
+
+    <!-- FEATURES WRAP -->
+  <div id="features">
+    <div class="container">
+      <div class="row">
+        <h1 class="centered">Information Page</h1>
+        <br>
+        <br>
+        <div class="col-lg-6 centered">
+          <h3>What is Anxiety?</h3>
+          
+          <p> Anxiety is a normal human reaction to feeling overwhelmed, stressed, and/or worried. There are a lot of factors in a college setting that make anxiety especially common: heavy workload, social status and interactions, and the career search, to name a few. But anxiety disorders are classified as mental illnesses and can become so overpowering that they make it impossible to live a normal life. </p>
+          <br>
+          
+          <p>These anxiety disorders include panic disorder, social anxiety disorder, phobias, and generalized anxiety disorder (GAD). Most of the time, these disorders manifest themselves in really physically crippling ways, even though they’re psychological. Treatment is important in managing these symptoms.</p>
+
+        </div>
+        
+        <div class="col-lg-6">
+          <h4>Symptoms</h4>
+          
+        <!-- ACCORDION -->
+                <li>Feelings of panic, fear, and uneasiness </li>
+                <li>Problems sleeping</li>
+                <li>Cold or sweaty extremities</li>
+                <li>Shortness of breath</li>
+                <li>Heart palpitations</li>
+                <li>An inability to be still or calm down</li>
+                <li>Dry mouth</li>
+                <li>Nausea</li>
+                <li>Muscle tension</li>
+                <li>Dizziness </li>
+
+
+
+
+
+                </div>
+<h4>Disorders</h4>
+<p><i>Panic Disorder: </i>A panic attack is a sudden, overwhelming sense of panic that often arrives without warning or specific purpose. Symptoms can include heart palpitations, sweating, difficulty breathing, and a feeling of “going crazy.” </p>
+
+<p><i>Social Anxiety Disorder:</i> Also known as social phobia, this is a serious illness represented by a real fear of and discomfort with social situations. People with social anxiety disorder often feel really self-conscious in these situations, worried about being judged by other people or acting in embarrassing ways.</p>
+
+<p><i>Phobias: </i>A phobia is an intense fear, generally of something specific. These can include anything from heights to snakes to trains. While most people are marginally afraid of lots of things, people with specific phobias may avoid everyday situations because of a disproportionate fear of some aspect of them.</p>
+
+<p><i>Generalized Anxiety Disorder: </i>The broadest of the anxiety illnesses, GAD consists of a constant and unrealistic sense of worry and distress, even if there isn’t any obvious cause for concern.</p>
+
+<h3> What are Mood Disorders? </h3>
+<p><i>Major/Clinical Depression:</i> Marked by a depressed mood most of the day, especially in the morning, and loss of interest in normal activities and relationships. Symptoms are present every day for at least two weeks, and often multiple years. Major depression affects about 6.7% of the US adult population, and will affect around 25% of adults at some point in their lifetimes. <i>Symptoms: fatigue/low energy almost every day, feelings of worthlessness/guilt almost every day, impaired concentration, insomnia or hypersomnia, diminished pleasure in almost all activities (anhedonia), restlessness, recurring thoughts of death or suicide, significant changes in weight.</p></i>
+
+<p><i>Dysthymic Disorder: </i>This is a less severe type of depression, but it still causes a chronic feeling of sadness for at least two years. A family history of mood disorders is often a factor and is more common in women than men. Dysthymic disorder can happen on its own or in conjunction with other psychiatric disorders. Up to 5% of the population suffers from this disorder. </p>
+
+<p><i>Seasonal Affective Disorder:</i> Also known as seasonal depression, SAD generally affects someone at the same time every year, generally during the cold, dark winter months. It’s probably caused by hormonal changes and starts around young adulthood.<i> Symptoms: less energy, trouble concentrating, fatigue, increased appetite, desire to be alone, need for sleep, weight gain.</i></p>
+
+<p><i>Cyclothymic Disorder:</i> Cyclothymia is a relatively mild mood disorder in which one’s mood swings between short periods of mild depression and hypomania, but don’t quite reach major depression or full mania, which characterize bipolar disorder. It straddles the line between mental illness and normal variations in mood, and swings may happen relatively infrequently.</p>
+
+        </div>
+        
+
+
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+    </div><!--/ .container -->
+  </div><!--/ #features -->
+   <!-- js -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.smooth-scroll.min.js"></script>
+  <script src="js/jquery.dlmenu.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/custom.js"></script>
+  <html>

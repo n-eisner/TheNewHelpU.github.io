@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HelpU</title>
+    <title>HelpU- Free Bootstrap 3 one page template</title>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- css -->
@@ -103,37 +103,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			  </div>
 			  <div class="row">
 			  	<div class="col-md-offset-3 col-md-6" data-wow-delay="0.3s">
-					<div class="service-box wow" data-wow-delay="0.1s">
+					<div class="service-box wow bounceInDown" data-wow-delay="0.1s">
 						<i class="fa fa-cog fa-4x"></i>
 						<h4>Determine your Mental Health Risk Level</h4>
-						<p>The PHQ-9 is the 9-item version of the Patient Health Questionnaire, and is well-validated and widely used by clinicians to measure a user's risk level for depression.</p>
+						<p>The PHQ-9 is the 9-item version of the Patient Health Questionnaire, and is well-validated and widely used by clinicians to measure a user's risk level for depression.
 
-						<a class="btn btn-primary"> Take the Survey</a>
+        </p>
+        
+<script type="text/javascript">
+    Parse.initialize("9KZwKGM5MeQkhEBat7WJvRY88hU48TALv31vzDRv", "UC8DoQHf09c1DC7jtHSPWDBL7nJFKC0fxIj6pmq4");
+    
+    var TestObject = Parse.Object.extend("TestObject");
+    var testObject = new TestObject();
+      testObject.save({foo: "survey"}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+  </script>
+
+<script type="text/javascript">
+    Parse.initialize("9KZwKGM5MeQkhEBat7WJvRY88hU48TALv31vzDRv", "UC8DoQHf09c1DC7jtHSPWDBL7nJFKC0fxIj6pmq4");
+    
+    var Click = Parse.Object.extend("buttonclick");
+    var clickObject = new Click();
+      clickObject.save({foo: "clicked"}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+  </script>
+
+						<a class="btn btn-primary"> <script>Parse.Analytics.track('action', "survey"); </script> Take the Survey</a>
 					</div>
                 </div></div><br><br>
                 <div class = "row">
                 <div class="col-xs-12 col-md-4 col-md-4 text-center ">
-					<div class="service-box wow" data-wow-delay="0.1s">
+					<div class="service-box wow bounceInDown" data-wow-delay="0.1s">
 						<i class="fa fa-code fa-4x"></i>
 						<h4>Contact CAPS (Counseling and Psychological Services)</h4>
 						<p>Are you in need of immediate assistance? Click the link below to get in touch with CAPS and speak directly with an experienced professional. </p>
 						<a href ="http://www.vpul.upenn.edu/caps/contact.php" class ="btn btn-primary">Contact CAPS now</a>
 					</div>
-                </div></div>
-                <br><br>
-                <div class = "row">
+                </div>
+                
                 <div class="col-xs-12 col-md-4 col-md-4 text-center " data-wow-delay="0.5s">
-					<div class="service-box wow" data-wow-delay="0.1s">
+					<div class="service-box wow bounceInDown" data-wow-delay="0.1s">
 						<i class="fa fa-desktop fa-4x"></i>
 						<h4>Reach Out to a Trained Peer Counselor</h4>
 						<p>The RAP-Line (Reach A Peer Hotline) is a group of student counselors trained to help students struggling with mental health issues. </p>
 						<a href = "http://www.vpul.upenn.edu/rap-online/"class="btn btn-primary">Contact the RAP-Line</a>
 					</div>
                 </div>
-                </div>
-                <br><br>
                 <div class="col-xs-12 col-md-4 col-md-4 text-center " data-wow-delay="0.7s">
-					<div class="service-box wow" data-wow-delay="0.1s">
+					<div class="service-box wow bounceInDown" data-wow-delay="0.1s">
 						<i class="fa fa-dropbox fa-4x"></i>
 						<h4>Information and Resources</h4>
 						<p>Click the link below to learn more about anxiety and depression and tips for dealing with these disorders. Also check out a compiled list of resources available to students for issues stemming from mental health, women's health, LGBT, grief counseling, and more. </p>
@@ -144,10 +173,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>
 	</section>
 	
-	  <!-- About -->
-
-	  <section id="about" class="home-section" bgcolor="#529abb">
-		<div class="container" bgcolor="#529abb">
+	  <!-- About <div id="intro">
+	  
+			<div class="intro-text">
+				<div class="container">
+					<div class="row">
+					
+						
+					<div class="col-md-12">
+			
+						<div class="brand">-->
+	  <div>
+	  
+			<div>
+				<div class="container">
+					<div class="row">
+					
+						
+					<div class="col-md-12">
+			
+							<div class="col-md-offset-2 col-md-8">
+					<div class="section-heading">
+					 <h2>About us</h2>
+					 <p>University of Pennsylvania students devoted to helping peers learn more about mental health and access the resources they need. </p>
+				  	</div>
+						</div>
+					</div>
+<div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<div>
+                    <img src="img/team/1.jpg" alt="" class="img-responsive" />
+                    <h4>Natalie Eisner</h4>
+                    <p>COMPE '15</p>
+					</div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
+					<div class="box-team">
+                    <img src="img/team/2.jpg" alt="" class="img-responsive" />
+                    <h4>Chelsea Williamson</h4>
+                    <p>SSE '15</p>
+					</div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
+					<div class="box-team">
+                    <img src="img/team/3.jpg" alt="" class="img-responsive" />
+                    <h4>Alon Krifcher</h4>
+                    <p>SSE '15</p>
+					</div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
+					<div class="box-team">
+                    <img src="img/team/4.jpg" alt="" class="img-responsive" />
+                    <h4>Daniela Rifkin</h4>
+                    <p>SSE '15</p>
+					</div>
+                </div>
+			  </div>			  
+					</div>
+				</div>
+		 	</div>
+			
+	 </div>
+	  
+	  <section id="about" >
+		<div class="container brand">
 			  <div class="row">
 				  <div class="col-md-offset-2 col-md-8">
 					<div class="section-heading">
@@ -158,29 +247,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			  </div>
 			  <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-					<div class="box-team wow" data-wow-delay="0.1s">
-                    <img src="img/team/1.jpg" height="274" width="268" alt="" class="img-responsive" />
+					<div class="box-team wow bounceInDown" data-wow-delay="0.1s">
+                    <img src="img/team/1.jpg" alt="" class="img-responsive" />
                     <h4>Natalie Eisner</h4>
                     <p>COMPE '15</p>
 					</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
-					<div class="box-team wow">
-                    <img src="img/team/2.jpg" height="274" width="268" alt="" class="img-responsive" />
+					<div class="box-team wow bounceInDown">
+                    <img src="img/team/2.jpg" alt="" class="img-responsive" />
                     <h4>Chelsea Williamson</h4>
                     <p>SSE '15</p>
 					</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
-					<div class="box-team wow">
-                    <img src="img/team/3.jpg" height="274" width="268" alt="" class="img-responsive" />
+					<div class="box-team wow bounceInDown">
+                    <img src="img/team/3.jpg" alt="" class="img-responsive" />
                     <h4>Alon Krifcher</h4>
                     <p>SSE '15</p>
 					</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
-					<div class="box-team wow">
-                    <img src="img/team/4.jpg" height="274" width="268" alt="" class="img-responsive" />
+					<div class="box-team wow bounceInDown">
+                    <img src="img/team/4.jpg" alt="" class="img-responsive" />
                     <h4>Daniela Rifkin</h4>
                     <p>SSE '15</p>
 					</div>
@@ -195,8 +284,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="row">
 					<div class="col-md-12">
 						<div class="color-light">
-						<h2 class="wow" data-wow-delay="1s">Suicide results in an estimated 1 million deaths per year... </h2>
-						<p class="lead wow" data-wow-delay="2s">Let's work together to reduce that number. Take action and get help for yourself or a friend today.</p>	
+						<h2 class="wow bounceInDown" data-wow-delay="1s">Suicide results in an estimated 1 million deaths per year... </h2>
+						<p class="lead wow bounceInUp" data-wow-delay="2s">Let's work together to reduce that number. Take action and get help for yourself or a friend today.</p>	
 						</div>
 					</div>				
 				</div>

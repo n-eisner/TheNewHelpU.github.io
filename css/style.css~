@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 }
 .about{
 	background-color: #529abb
-	font-color: #FFF
+	font-color: #FFFFFF
 }
 .lead{
 	font-weight: 400;

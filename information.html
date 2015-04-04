@@ -18,11 +18,26 @@
 
 
 </style>
-
+<div class="menu-area">
+      <div id="dl-menu" class="dl-menuwrapper">
+            <button class="dl-trigger">Open Menu</button>
+            <ul class="dl-menu">
+              <li>
+                <a class="btn btn-success btn-sm" href="#anxiety"><small>Anxiety</small></a>
+  <a class="btn btn-danger btn-sm" href="#mood"><small>Mood Disorders</small></a>
+  <a class="btn btn-warning btn-sm" href="#psych"><small>Psychosis</small></a>
+   <a class="btn btn-primary btn-sm" href="#resources"><small>Resources</small></a>
+    <a class="btn btn-info btn-sm" href="#help"><small>Help a Friend</small></a>
+    <a class="btn btn-sm" href="#poll"><small>Poll Question</small></a>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /dl-menuwrapper -->
+  </div>  </div>
     <!-- FEATURES WRAP -->
-  <div id="features">
+  
     <div class="container" >
-      <div class="row">
+    
         <div class="jumbotron" >
           
   <i class="fa fa-info-circle fa-4x"></i>
@@ -31,16 +46,11 @@
   
   <p>The following page is designed to provide information about anxiety, depression, and psychosis as well as strategies to help students cope when related symptoms begin to interfere with daily life. Select a category of interest below to learn more. </p><br>
 <p><small><i>Note: Information derived from WebMD, Mayo Clinic, CAPS, and personal experience </p></small></i><br>
- <div class = "row">
-  <a class="btn btn-success btn">Anxiety</a>
-  <a class="btn btn-danger btn">Mood Disorders</a>
-  <a class="btn btn-warning btn">Psychosis</a>
-   <a class="btn btn-primary btn">Resources</a>
-    <a class="btn btn-info btn">Help a Friend</a><br>
 
-</div>
-   </div>     
-        <div class="jumbotron" "col-lg-12 centered">
+   </div>    </div>
+<div class = "container">
+        <div id="anxiety"  class="jumbotron" "col-lg-12 centered" >
+          
           <font color= "#5cb85c"><i class="fa fa-circle fa-3x"></i></font>
           <h3>What is Anxiety?</h3>
           
@@ -82,6 +92,7 @@
 <p><i><small><strong>Phobias:</strong> </i>A phobia is an intense fear, generally of something specific. These can include anything from heights to snakes to trains. While most people are marginally afraid of lots of things, people with specific phobias may avoid everyday situations because of a disproportionate fear of some aspect of them.</p></small>
 
 <p><i><small><strong>Panic Disorder:</strong> </i>A panic attack is a sudden, overwhelming sense of panic that often arrives without warning or specific purpose. Symptoms can include heart palpitations, sweating, difficulty breathing, and a feeling of “going crazy.” </p></small><br>
+
 <div class="row"><div class="panel panel-success col-lg-offset-2 col-lg-8 text-center">
   <div class="panel-heading">
     <h3 class="panel-title">Tips for Dealing with Anxiety</h3>
@@ -102,19 +113,21 @@
                  <p class = "text-left"><small>- Always know that you're not alone. Talking with other students experiencing similar problems can help more than you know. Check out the <a href="http://pennmentalhealth.tumblr.com/">Pennsive blog,</a> or attend a <a href="http://www.vpul.upenn.edu/caps/groups.php">group therapy session</a> at CAPS. </p></small>
                   <p class = "text-left"><small>- Volunteer to help others. Check out the <a href="http://www.upenn.edu/life-at-penn/community_services.php">community service initiatives</a> on campus. </p></small>
         </div></div></div>
+<div class = "row">
+<h4> Learn More About Anxiety </h4>
+<p> <small>Interested in learning more about anxiety? Check out <a href="http://www.webmd.com/anxiety-panic/anxiety-disorder-causes"> this informative WebMD page. </a></p></div></small>
+</div></div>
 
 
-
-</DIV>
-
+</div>
         <!-- END ANXIETY -->
 
 
-
-<div class= "jumbotron">
+<div class = "container">
+<div class= "jumbotron" id="mood" >
   <font color= "#ff7a7a"><i class="fa fa-square-o fa-3x"></i></font>
           <h3>What are Mood Disorders?</h3>
-<p> <small>Mood disorders are marked by consistently depressed (depression), elevated (mania), or fluctuating (bipolar) moods that interfere with one’s daily life. These moods are inconsistent with one’s circumstances or experiences and occur largely independently of them.  </p></small><br>
+<p> <small>Mood disorders are marked by consistently depressed (depression), elevated (mania), or fluctuating (bipolar) moods that interfere with one’s daily life. These moods are inconsistent with one’s circumstances or experiences and occur largely independently of them.  </p></small>
 
          
           
@@ -199,9 +212,15 @@
                  <p class = "text-left"><small>- Always know that you're not alone. Talking with other students experiencing similar problems can help more than you know. Check out the <a href="http://pennmentalhealth.tumblr.com/">Pennsive blog,</a> or attend a <a href="http://www.vpul.upenn.edu/caps/groups.php">group therapy session</a> at CAPS. </small></p>
                  <p class = "text-left"><small>- Volunteer to help others. Check out the <a href="http://www.upenn.edu/life-at-penn/community_services.php">community service initiatives</a> on campus. </small></p>
       </div>
-</div></div></div>
+</div></div><div class = "row">
+<h4> Learn More About Mood Disorders </h4>
+<p> <small>Interested in learning more about mood disorders? Check out <a href="http://www.webmd.com/mental-health/mood-disorders"> this informative WebMD page. </a></p></div></small>
+</div></div>
 
-        <div class="jumbotron">
+
+</div>
+
+        <div id ="psych" class="jumbotron">
 
              <font color= "#f0ad4e"><i class="fa fa-dot-circle-o fa-3x"></i></font>
              <h3>What is Psychosis?</h3>
@@ -240,11 +259,14 @@
 <p><small><i><strong>Schizoaffective Disorder:</i> </strong>People with this disorder have symptoms of both schizophrenia and a mood disorder, such as depression or bipolar disorder.</p></small>
 
 <p><i><small><strong>Schizophrenia:</i></strong> Schizophrenia manifests itself in many ways, but is marked by hallucinations, delusions, and other changes in behavior that last longer than six months. These are usually accompanied by a decline in work, school, and social functioning.</p></small>
- 
+ <div class = "row">
+<h4> Learn More About Psychosis </h4>
+<p> <small>Interested in learning more about psychosis? Check out <a href="http://www.webmd.com/schizophrenia/guide/mental-health-psychotic-disorders"> this informative WebMD page. </a></p></div></small>
+</div></div>
  
 </div>
 
- <div class="container">
+ <div id="resources" class="container">
     
     <div class="col-md-offset-1 col-md-10 text-center">
 
@@ -735,7 +757,7 @@
 
 
 <div class = "container">
-<div class = "jumbotron"  BGCOLOR="#529abb">
+<div id="help" class = "jumbotron" >
 <font color= "#5bc0de"><i class="fa fa-heart fa-3x"></i></font>
   <h3>Help a Friend</h3>
 <h5>Identifying Stress, Distress, and Crisis</h5>
@@ -847,15 +869,23 @@
 <strong><FONT COLOR="#529abb">Explore: </strong></font>Consider possible solutions and resources with them.</p></small>
 </div></div></div>
 
-</div></div>
-
+</div></div><div class = container>
+<div id="poll" class = jumbotron><i class="fa fa-question-circle fa-3x"></i><h4>Participate in our Poll!</h4>
+    <center><!-- Web Poll Code --><!-- Web Poll Code --><div id="wpg_552052f77a190">Loading <a href="http://www.webpollgenerator.com">web poll</a>...</div><script language="JavaScript">(function(){wpgscript_552052f77a190=document.createElement('script');wpgscript_552052f77a190.type="text/javascript";wpgscript_552052f77a190.src="http://www.webpollgenerator.com/GetPoll2.php?p=552052f77a190" + "&s=" + escape(window.location);setTimeout("document.getElementById('wpg_552052f77a190').appendChild(wpgscript_552052f77a190)",1);})();</script><noscript><div><a href="http://www.webpollgenerator.com/Have-you-learned-something-new-about-managing-your-mental-health-at-Penn-after-using-this-website-552052f77a190" title="generator html polls">Generate HTML Polls</a>&nbsp;<br/>-&nbsp;<a href="http://www.webpollgenerator.com" title="html poll creator">HTML Poll Creator</a></div></noscript><!-- End Web Poll Generator JavaScript Code --><!-- End Web Poll Generator JavaScript Code --></center>
+    <br></div></div>
 <div class = "container">
   <a href = "index.html"> <i class="fa fa-home fa-3x"></i></a>
-  <p> Click the home icon above to return to our homepage. </p>
+  <p> Click the icon above to return to our homepage. </p>
 
     </div><!--/ .container -->
   </div><!--/ #features -->
    <!-- js -->
+    <div class = "container">
+    <style> body:after {
+  content:"\00a9  HelpU; By Chelsea Williamson, Natalie Eisner, Dany Rifkin, Alon Krifcher; Students at the University of Pennsylvania";
+} </style>    
+  </div>
+  <a class="label label-success " href="termsofuse.html"><small>Terms of Use</small></a><br><p></p>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.smooth-scroll.min.js"></script>

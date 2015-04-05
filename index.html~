@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HelpU</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+	<link href="color/default.css" rel="stylesheet" media="screen">
+	<script src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.0.min.js"></script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQP8SF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQP8SF');</script>
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript">
+          /**
+ * @license
+ *! H5F
+ * https://github.com/ryanseddon/H5F/
+ * Copyright (c) Ryan Seddon | Licensed MIT
+ */
+
+(function(e,t){"function"==typeof define&&define.amd?define(t):e.H5F=t()})(this,function(){var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};if("object"==typeof t)for(var r in i)t[r]===void 0&&(t[r]=i[r]);if(n=t||i,a)for(var l=0,u=e.length;u>l;l++)s(e[l]);else s(e)},s=function(a){var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),b(a,"submit",function(i){e=!0,t||s||a.checkValidity()||w(i)},!1),!v())for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&&l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&&!s.test(i)&&p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&&(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&o&&(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o>l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&(n||r&&n)&&(u(i),i.validity.valid||s||(e&&i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(x,"validity")&&E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},b=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
+
+        </script>
+<link rel="alternate" type="text/xml+oembed" href="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/oembed?url=https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform&amp;format=xml">
+<meta property="og:title" content="HelpU"><meta property="og:type" content="article"><meta property="og:site_name" content="Google Docs"><meta property="og:url" content="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform?usp=embed_facebook"><meta property="og:image" content="https://lh5.googleusercontent.com/h-ifH0vJ57jf82RYLPbIS-vzl4sZLiujzYgDXdl_8ILqX9Emm-Zqvbe7Gc7vopzKObI=w1200-h630-p"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="player"><meta name="twitter:title" content="HelpU"><meta name="twitter:url" content="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform?usp=embed_twitter"><meta name="twitter:image" content="https://lh5.googleusercontent.com/h-ifH0vJ57jf82RYLPbIS-vzl4sZLiujzYgDXdl_8ILqX9Emm-Zqvbe7Gc7vopzKObI=w435-h251-p-b1-c0x00999999"><meta name="twitter:player:width" content="435"><meta name="twitter:player:height" content="251"><meta name="twitter:player" content="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform?embedded=true&amp;usp=embed_twitter"><meta name="twitter:description" content="Google Drive"><meta name="twitter:site" content="@googledocs">
+
+      </head>
+  <body>
+  	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61151684-1', 'auto');
+  ga('create', 'UA-GTM-TQP8SF', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+	<div class="menu-area">
+			<div id="dl-menu" class="dl-menuwrapper">
+						<button class="dl-trigger">Open Menu</button>
+						<ul class="dl-menu">
+							<li>
+								<a href="#intro">Home</a>
+							</li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#services">Resources</a></li>
+							<li><a href="#works">Survey</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div><!-- /dl-menuwrapper -->
+	</div>	
+
+	  <!-- intro area -->	  
+	  <div id="intro">
+	  
+			<div class="intro-text">
+				<div class="container">
+					<div class="row">
+					
+						
+					<div class="col-md-12">
+			
+						<div class="brand">
+							<h1><a href="index.html">HelpU</a></h1>
+							<div class="line-spacer"></div>
+							<p><span>Reducing Mental Health Stigma</span></p>
+						</div>
+					</div>
+					</div>
+				</div>
+		 	</div>
+			
+	 </div>
+	  
+	  
+	  
+	  <!-- Services -->
+	 <section id="services" class="home-section bg-white">
+		<div class="container">
+			  <div class="row">
+				  <div class="col-md-offset-2 col-md-8">
+					<div class="section-heading">
+					 <h2>Learn More About Mental Health </h2>
+					 <p>Feeling stressed out, tired, or mentally exhausted? Are you curious as to what you're feeling is normal, or whether it's getting to be out of hand? Are you concerned about a friend's safety? Or just interested in learning more about mental health in general? Check out the resources below - you'll be glad you did.  </p>
+					</div>
+				  </div>
+			  </div>
+			  <div class="row">
+			  	<div class="col-md-offset-3 col-md-6" data-wow-delay="0.3s">
+					<div class="service-box wow" data-wow-delay="0.1s">
+						<i class="fa fa-cog fa-4x"></i>
+						<h4>Determine your Mental Health Risk Level</h4>
+						<p>The PHQ-9 is the 9-item version of the Patient Health Questionnaire, and is well-validated and widely used by clinicians to measure a user's risk level for depression.</p>
+
+						<a class="btn btn-primary"> Take the Survey</a>
+					</div>
+                </div></div><br><br>
+                <div class = "row">
+                <div class="col-xs-12 col-md-4 col-md-4 text-center ">
+					<div class="service-box wow" data-wow-delay="0.1s">
+						<i class="fa fa-code fa-4x"></i>
+						<h4>Contact CAPS (Counseling and Psychological Services)</h4>
+						<p>Are you in need of immediate assistance? Click the link below to get in touch with CAPS and speak directly with an experienced professional. </p>
+						<a href ="http://www.vpul.upenn.edu/caps/contact.php" class ="btn btn-primary">Contact CAPS now</a>
+					</div>
+                </div></div>
+                <br><br>
+                <div class = "row">
+                <div class="col-xs-12 col-md-4 col-md-4 text-center " data-wow-delay="0.5s">
+					<div class="service-box wow" data-wow-delay="0.1s">
+						<i class="fa fa-desktop fa-4x"></i>
+						<h4>Reach Out to a Trained Peer Counselor</h4>
+						<p>The RAP-Line (Reach A Peer Hotline) is a group of student counselors trained to help students struggling with mental health issues. </p>
+						<a href = "http://www.vpul.upenn.edu/rap-online/"class="btn btn-primary">Contact the RAP-Line</a>
+					</div>
+                </div>
+                </div>
+                <br><br>
+                <div class="col-xs-12 col-md-4 col-md-4 text-center " data-wow-delay="0.7s">
+					<div class="service-box wow" data-wow-delay="0.1s">
+						<i class="fa fa-dropbox fa-4x"></i>
+						<h4>Information and Resources</h4>
+						<p>Click the link below to learn more about anxiety and depression and tips for dealing with these disorders. Also check out a compiled list of resources available to students for issues stemming from mental health, women's health, LGBT, grief counseling, and more. </p>
+						<a href="information.html" class="btn btn-primary">Learn more</a>
+					</div>
+                </div>
+			  </div>	
+		</div>
+	</section>
+	
+	  <!-- About -->
+
+	  <section id="about" class="home-section" bgcolor="#529abb">
+		<div class="container" bgcolor="#529abb">
+			  <div class="row">
+				  <div class="col-md-offset-2 col-md-8">
+					<div class="section-heading">
+					 <h2>About us</h2>
+					 <p>University of Pennsylvania students devoted to helping peers learn more about mental health and access the resources they need. </p>
+					</div>
+				  </div>
+			  </div>
+			  <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<div class="box-team wow" data-wow-delay="0.1s">
+                    <img src="img/team/1.jpg" height="274" width="268" alt="" class="img-responsive" />
+                    <h4>Natalie Eisner</h4>
+                    <p>COMPE '15</p>
+					</div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
+					<div class="box-team wow">
+                    <img src="img/team/2.jpg" height="274" width="268" alt="" class="img-responsive" />
+                    <h4>Chelsea Williamson</h4>
+                    <p>SSE '15</p>
+					</div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
+					<div class="box-team wow">
+                    <img src="img/team/3.jpg" height="274" width="268" alt="" class="img-responsive" />
+                    <h4>Alon Krifcher</h4>
+                    <p>SSE '15</p>
+					</div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
+					<div class="box-team wow">
+                    <img src="img/team/4.jpg" height="274" width="268" alt="" class="img-responsive" />
+                    <h4>Daniela Rifkin</h4>
+                    <p>SSE '15</p>
+					</div>
+                </div>
+			  </div>			  
+		  </div>	  
+	  </section>
+	  
+		<!-- spacer -->	  
+		<section id="spacer1" class="home-section spacer">	
+           <div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="color-light">
+						<h2 class="wow" data-wow-delay="1s">Suicide results in an estimated 1 million deaths per year... </h2>
+						<p class="lead wow" data-wow-delay="2s">Let's work together to reduce that number. Take action and get help for yourself or a friend today.</p>	
+						</div>
+					</div>				
+				</div>
+            </div>
+		</section>
+	  
+	 <!-- Contact -->
+<section id="contact" class="home-section bg-white" dir="ltr">
+	<div itemscope itemtype="http://schema.org/CreativeWork/FormObject">
+		<meta itemprop="name" content="HelpU">
+<meta itemprop="url" content="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform">
+<meta itemprop="embedUrl" content="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform?embedded=true">
+<meta itemprop="faviconUrl" content="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png">
+
+
+
+
+
+<h1>Contact Us!</h1>
+
+
+
+<div class="ss-form" id="contact">
+<script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+onload="if(submitted) {window.location='index_contacted.html#contact';}"></iframe>
+
+<form action="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true"><ol role="list" class="ss-question-list" style="padding-left: 0">
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item ss-item-required ss-text">
+
+<div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1563458675"><div class="ss-q-title">
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+</div>
+<input type="text" name="entry.1563458675" value="" class="form-control" id="entry_1563458675" dir="auto" aria-label="Name  " aria-required="true" title="" placeholder="Name" required>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1863213432">
+<input type="email" name="entry.1863213432" value="" class="form-control" id="entry_1863213432" dir="auto" aria-label="Email  Please enter a valid e-mail address " aria-required="true" title="Please enter a valid e-mail address " placeholder="Email" required>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1710867864">
+<input type="text" name="entry.1710867864" value="" class="form-control" id="entry_1710867864" dir="auto" aria-label="Subject  " aria-required="true" title="" placeholder="Subject" required>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1139329144">
+<textarea name="entry.1139329144" rows="8" cols="0" class="form-control" rows="3" id="entry_1139329144" dir="auto" aria-label="Message  " aria-required="true" required="" placeholder="Message"></textarea>
+<div class="error-message" id="855648658_errorMessage"></div>
+</div></div></div>
+<input type="hidden" name="draftResponse" value="[,,&quot;-8996477522859132394&quot;]
+" required>
+<input type="hidden" name="pageHistory" value="0">
+
+
+<input type="hidden" name="fbzx" value="-8996477522859132394">
+
+<div class="form-group">
+					<div class="col-md-offset-2 col-md-8">
+					 <input type="submit" class="btn btn-theme btn-lg btn-block" name="submit" value="SEND MESSAGE" id="ss-submit" >
+					</div>
+				  </div>
+</td>
+</tr></tbody></table></div></ol></form></div>
+
+
+<div id="docs-aria-speakable" class="docs-a11y-ariascreenreader-speakable docs-offscreen" aria-live="assertive" role="region" aria-atomic></div></div>
+
+
+<script type='text/javascript' src='/static/forms/client/js/2628030999-formviewer_prd.js'></script>
+<script type="text/javascript">H5F.setup(document.getElementById('ss-form'));
+          _initFormViewer(
+            "[100,,[[[1863213432,[[2,102,,\x22Please enter a valid e-mail address \x22]\n]\n]\n]\n]\n]\n");</script></div></section>
+
+			
+	  			</div>
+			
+				
+	  		</div>
+			
+<!--This is a comment. 
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy;2014 Mamba company. All rights reserved. By <a href="http://bootstraptaste.com">Bootstraptaste</a></p>
+				</div>
+			</div>		
+		</div>	
+-->
+	 <!-- js -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.smooth-scroll.min.js"></script>
+	<script src="js/jquery.dlmenu.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/custom.js"></script>
+  	
+<!-- Labels
+================================================== -->
+
+</html>

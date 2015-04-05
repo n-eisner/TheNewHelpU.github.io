@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>HelpU</title>
@@ -28,9 +27,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  * https://github.com/ryanseddon/H5F/
  * Copyright (c) Ryan Seddon | Licensed MIT
  */
-
 (function(e,t){"function"==typeof define&&define.amd?define(t):e.H5F=t()})(this,function(){var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};if("object"==typeof t)for(var r in i)t[r]===void 0&&(t[r]=i[r]);if(n=t||i,a)for(var l=0,u=e.length;u>l;l++)s(e[l]);else s(e)},s=function(a){var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),b(a,"submit",function(i){e=!0,t||s||a.checkValidity()||w(i)},!1),!v())for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&&l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&&!s.test(i)&&p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&&(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&o&&(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o>l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&(n||r&&n)&&(u(i),i.validity.valid||s||(e&&i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(x,"validity")&&E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},b=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
-
         </script>
 <link rel="alternate" type="text/xml+oembed" href="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/oembed?url=https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform&amp;format=xml">
 <meta property="og:title" content="HelpU"><meta property="og:type" content="article"><meta property="og:site_name" content="Google Docs"><meta property="og:url" content="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform?usp=embed_facebook"><meta property="og:image" content="https://lh5.googleusercontent.com/h-ifH0vJ57jf82RYLPbIS-vzl4sZLiujzYgDXdl_8ILqX9Emm-Zqvbe7Gc7vopzKObI=w1200-h630-p"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="player"><meta name="twitter:title" content="HelpU"><meta name="twitter:url" content="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform?usp=embed_twitter"><meta name="twitter:image" content="https://lh5.googleusercontent.com/h-ifH0vJ57jf82RYLPbIS-vzl4sZLiujzYgDXdl_8ILqX9Emm-Zqvbe7Gc7vopzKObI=w435-h251-p-b1-c0x00999999"><meta name="twitter:player:width" content="435"><meta name="twitter:player:height" content="251"><meta name="twitter:player" content="https://docs.google.com/forms/d/1IkNsLwpMulxcK2W8RvIjn5Ro_F5-nEQnEgGOSWpKBRA/viewform?embedded=true&amp;usp=embed_twitter"><meta name="twitter:description" content="Google Drive"><meta name="twitter:site" content="@googledocs">
@@ -42,14 +39,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-61151684-1', 'auto');
   ga('create', 'UA-GTM-TQP8SF', 'auto');
   ga('send', 'pageview');
-
 </script>
 
+<style>
 
+footer {
+  background: #529abb;
+    color: #ffffff;
+}
+
+
+</style>
 
 	<div class="menu-area">
 			<div id="dl-menu" class="dl-menuwrapper">
@@ -58,9 +61,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<li>
 								<a href="#intro">Home</a>
 							</li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#services">Resources</a></li>
-							<li><a href="#works">Survey</a></li>
+							<li><a href="#survey">Survey</a></li>
+							<li><a href="#info">Resources</a></li>
+							<li><a href="#about">The Team</a></li>
 							<li><a href="#contact">Contact</a></li>
 						</ul>
 					</div><!-- /dl-menuwrapper -->
@@ -92,15 +95,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	  
 	  <!-- Services -->
 	 <section id="services" class="home-section bg-white">
-		<div class="container">
+		
+			<div class="container" id="survey">
 			  <div class="row">
 				  <div class="col-md-offset-2 col-md-8">
 					<div class="section-heading">
 					 <h2>Learn More About Mental Health </h2>
-					 <p>Feeling stressed out, tired, or mentally exhausted? Are you curious as to whether what you're feeling is normal or is getting to be out of hand? Are you concerned about a friend's safety? Or just interested in learning more about mental health in general? Check out the resources below - you'll be glad you did.  </p>
+					 <p>Feeling stressed out, tired, or mentally exhausted? Are you curious as to what you're feeling is normal, or whether it's getting to be out of hand? Are you concerned about a friend's safety? Or just interested in learning more about mental health in general? Check out the resources below - you'll be glad you did.  </p>
 					</div>
-				  </div>
-			  </div>
+				  </div></div>
+
+			  
 			  <div class="row">
 			  	<div class="col-md-offset-3 col-md-6 text-center" data-wow-delay="0.3s">
 					<i class="fa fa-pencil-square-o fa-4x"></i>
@@ -123,43 +128,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					</div>
                 </div>
                 
-                
+              
                 <div class="col-xs-12 col-md-4 col-md-4 text-center" data-wow-delay="0.5s">
 					<div class="service-box wow" data-wow-delay="0.1s">
 						<i class="fa fa-comments fa-4x"></i>
 						<h4>Reach Out to a Trained Peer Counselor</h4>
-						<p>The RAP-Line (Reach A Peer Hotline) is a group of student counselors trained to help students struggling with mental health issues. </p>
+						<ln>The RAP-Line (Reach A Peer Hotline) is a group of student counselors trained to help students struggling with mental health issues. <br></ln>
+						<p><strong> Coming soon: Text anonymously with RAP Line!</p></strong>
 						<a href = "http://www.vpul.upenn.edu/rap-online/"class="btn btn-primary">Contact the RAP-Line</a>
 						<p></p>
 					</div>
-                </div>
+               </div>
                 
                 
-                <div class="col-xs-12 col-md-4 col-md-4 text-center" data-wow-delay="0.7s">
+                <div id="info" class="col-xs-12 col-md-4 col-md-4 text-center" data-wow-delay="0.7s">
 					<div class="service-box wow" data-wow-delay="0.1s">
 						<i class="fa fa-info-circle fa-4x"></i>
 						<h4>Information and Resources</h4>
-						<p>Click the link below to learn more about anxiety and depression and tips for dealing with these disorders. Also check out a compiled list of resources available to students for issues stemming from mental health, women's health, LGBT, grief counseling, and more. </p>
+						<p>Learn more about anxiety, mood disorders, psychosis, and tips for dealing with these disorders. Also check out a compiled list of resources available to students for issues stemming from mental health, women's health, LGBT, grief counseling, and more. </p>
 						<a href="information.html" class="btn btn-primary">Learn more</a>
 					</div>
-                </div>
+                
 			  </div>	
 		</div></div>
 	</section>
 	
 	  <!-- About -->
 
-<<<<<<< HEAD
-	  <section id="about" class="home-section">
-		<div class="jumbotron">
-			  <div class="row">
-=======
+	  
+		<!-- spacer -->	  
+		<section>
+           <div class="container">
+				<div class="jumbotron">
+					
+						<blockquote class="text-left">
+     <h2>Four Key Recommendations from the Mental Health Task Force:</h2><br>
+     	<p><ln>1. Increase communication about mental health </ln><br>
+<ln>2. Make resources more accessible </ln><br>
+<ln>3. Educate the Penn community about mental health </ln><br>
+<ln>4. Optimizing the resources devoted to CAPS</ln>
+</p>
+     <small><cite>Report of the Task Force on Student Psychological Health and Welfare (February 2015)</cite></small>
+</blockquote>
+<h2>What is HelpU?</h2>
+<p> HelpU is a product designed by Penn students and for Penn students, addressing three out of the four key recommendations outlined by Penn's Mental Health Task Force. HelpU's mission is to reduce the negative stigma associated with mental illness, encouraging students to reach out and get help for themselves and their peers.  HelpU allows students to become more educated about mental health issues, provides consolidated access to a wide variety of resources available both on and off campus, and encourages students to communicate openly with one another about mental health. </p>
+<p> <strong>HelpU features: </p></strong>
+<p class="text-left">1. A well-validated mental health questionnaire that estimates students' risk level for depression</p>
+<p class="text-left">2. A consolidated list of resources available on campus and off campus</p>
+<p class="text-left">3. An anonymous texting app for students to reach out to CAPS-trained peer counselors</p>
+<p class="text-left">4. Information about mental health disorders and strategies for coping with related symptoms</p>
+<p class="text-left">5. Recommendations for students looking to help a friend who may be struggling with mental illness</p><br>
+<p><small><strong> To read the complete "Report of the Task Force on Student Psychological Health and Welfare," <a href="http://www.upenn.edu/almanac/volumes/v61/n23/pdf/task-force-psychological-health.pdf ">click here.</a></p></small></strong>
+					</div>				
+				</div>
+            </div>
+		</section>
+
 	  <section id="about" class="jumbotron" bgcolor="#529abb">
 		<font color="white"> 
 		<div class="container" bgcolor="#529abb">
 			 
 		  <div class="row">
->>>>>>> origin/master
 				  <div class="col-md-offset-2 col-md-8">
 					<div class="section-heading">
 					 <h2><font color="white"> About us</font></h2>
@@ -171,72 +200,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 					<div class="box-team wow" data-wow-delay="0.1s">
                     <img src="img/team/1.jpg" height="274" width="268" alt="" class="img-responsive" />
-<<<<<<< HEAD
-                    <h4>Natalie Eisner</h4>
-                    <p>Computer Engineering <br>
-                    Class of 2015</p>
-=======
                     <h4><font color="white"> Natalie Eisner</font></h4>
-                    <p>Computer Engineering '15</p>
->>>>>>> origin/master
+                    <p>Computer Engineering </p>
+                    <p>Class of 2015</p>
 					</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
 					<div class="box-team wow">
                     <img src="img/team/2.jpg" height="274" width="268" alt="" class="img-responsive" />
-<<<<<<< HEAD
-                    <h4>Chelsea Williamson</h4>
-                    <p>Systems Science & Engineering <br>
-                    Class of 2015</p>
-=======
                     <h4><font color="white"> Chelsea Williamson</font></h4>
-                    <p>Systems Engineering '15</p>
->>>>>>> origin/master
+                    <p>Systems Engineering </p><p> Class of 2015</p>
 					</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
 					<div class="box-team wow">
                     <img src="img/team/3.jpg" height="274" width="268" alt="" class="img-responsive" />
-<<<<<<< HEAD
-                    <h4>Alon Krifcher</h4>
-                    <p>Systems Science & Engineering <br>
-                    Class of 2015</p>
-=======
                     <h4><font color="white"> Alon Krifcher</font></h4>
-                    <p>Systems Engineering '15</p>
->>>>>>> origin/master
+                    <p>Systems Engineering </p><p> Class of 2015</p>
 					</div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
 					<div class="box-team wow">
                     <img src="img/team/4.jpg" height="274" width="268" alt="" class="img-responsive" />
-<<<<<<< HEAD
-                    <h4>Daniela Rifkin</h4>
-                    <p>Systems Science & Engineering <br>
-                    Class of 2015</p>
-=======
                     <h4><font color="white"> Daniela Rifkin</font></h4>
-                    <p>Systems Engineering '15</p>
->>>>>>> origin/master
+                    <p>Systems Engineering </p><p> Class of 2015</p>
 					</div>
                 </div>
 			  </div>			  
 		  </div></font>	  
 	  </section>
-	  
-		<!-- spacer -->	  
-		<section id="spacer1" class="home-section spacer">	
-           <div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="color-light">
-						<h2 class="wow" data-wow-delay="1s">Suicide results in an estimated 1 million deaths per year... </h2>
-						<p class="lead wow" data-wow-delay="2s">Let's work together to reduce that number. Take action and get help for yourself or a friend today.</p>	
-						</div>
-					</div>				
-				</div>
-            </div>
-		</section>
 	  
 	 <!-- Contact -->
 <section id="contact" class="home-section bg-white" dir="ltr">
@@ -314,7 +306,15 @@ onload="if(submitted) {window.location='index_contacted.html#contact';}"></ifram
 			
 				
 	  		</div>
-			
+			<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy;2015 HelpU. All rights reserved. By Chelsea Williamson, Natalie Eisner, Dany Rifkin, & Alon Krifcher; Students at the University of Pennsylvania</p>
+				</div>
+			</div>		
+		</div>	
+  <a class="label label-success " href="termsofuse.html"><small>Terms of Use</small></a><br><p></p>
 <!--This is a comment. 
 	<footer>
 		<div class="container">
